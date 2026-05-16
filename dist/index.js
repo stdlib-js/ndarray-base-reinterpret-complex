@@ -1,5 +1,30 @@
-"use strict";var u=function(e,r){return function(){return r||e((r={exports:{}}).exports,r),r.exports}};var i=u(function(d,a){
-var o=require('@stdlib/array-base-assert-is-complex128array/dist'),p=require('@stdlib/array-base-assert-is-complex64array/dist'),v=require('@stdlib/ndarray-base-reinterpret-complex128/dist'),n=require('@stdlib/ndarray-base-reinterpret-complex64/dist'),l=require('@stdlib/ndarray-base-dtype-resolve-str/dist'),s=require('@stdlib/ndarray-base-dtype/dist'),m=require('@stdlib/ndarray-base-data-buffer/dist'),q=require('@stdlib/error-tools-fmtprodmsg/dist');function c(e){var r,t;if(r=l(s(e)),t=m(e),r==="complex128"&&o(t))return v(e);if(r==="complex64"&&p(t))return n(e);throw new TypeError(q("invalid argument. Must provide a complex-valued floating-point ndarray. Value: `%s`.",e))}a.exports=c
-});var f=i();module.exports=f;
 /** @license Apache-2.0 */
-//# sourceMappingURL=index.js.map
+
+'use strict';
+
+/**
+* Reinterpret a complex-valued floating-point ndarray as a real-valued floating-point ndarray having the same precision.
+*
+* @module @stdlib/ndarray-base-reinterpret-complex
+*
+* @example
+* var zeroTo = require( '@stdlib/blas-ext-zero-to' );
+* var reinterpretComplex = require( '@stdlib/ndarray-base-reinterpret-complex' );
+*
+* var x = zeroTo( [ 2, 2 ], {
+*     'dtype': 'complex128'
+* });
+* // returns <ndarray>[ [ <Complex128>[ 0.0, 0.0 ], <Complex128>[ 1.0, 0.0 ] ], [ <Complex128>[ 0.0, 0.0 ], <Complex128>[ 1.0, 0.0 ] ] ]
+*
+* var out = reinterpretComplex( x );
+* // returns <ndarray>[ [ [ 0.0, 0.0 ], [ 1.0, 0.0 ] ], [ [ 0.0, 0.0 ], [ 1.0, 0.0 ] ] ]
+*/
+
+// MODULES //
+
+var main = require( './main.js' );
+
+
+// EXPORTS //
+
+module.exports = main;
