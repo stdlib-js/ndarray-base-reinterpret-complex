@@ -45,7 +45,7 @@
     "@stdlib/ndarray-base-reinterpret-complex128": "github:stdlib-js/ndarray-base-reinterpret-complex128#main",
     "@stdlib/ndarray-base-reinterpret-complex64": "github:stdlib-js/ndarray-base-reinterpret-complex64#main",
     "@stdlib/string-format": "^0.2.3",
-    "@stdlib/types": "^0.4.3",
+    "@stdlib/types": "^0.5.1",
     "@stdlib/error-tools-fmtprodmsg": "^0.2.3"
   },
   "devDependencies": {
